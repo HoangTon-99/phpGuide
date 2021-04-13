@@ -7,31 +7,54 @@
 }
 #header{
     position: relative;
-    background-image: url('../img/anhpc.jpg');
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("./img/anhpc.jpg");
     background-repeat: no-repeat;
     height: 600px;
     background-size: cover;
     background-position: center;
 }
-
-.header_left{
+.nav_menu_{
+    position: relative;
+}
+.nav_menu_left{
     float: left;
 }
-.header_left h2{
+.nav_menu_left h2{
+    padding: 20px;
+    margin: 0 15px;
     font-size: 40px;
+    color: #fff;
 }
-.header_right{
-    float: right;
+.nav_menu_right{
+    
 }
+.nav_menu_right ul{
+    position: absolute;
+    right: 0;
+    padding-right: inherit;
+}
+.nav_menu_right li{
+    padding: 20px;
+    margin: 0 15px;
+    display: inline-block;
+}
+.nav_menu_right li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.border {
+    border-radius: 100px;
+    border-color: #000;
+}
+.border a{
+    margin: 10px 15px;
+    
+}
+/* 
 .header_menu li{
     display: inline-block;
     text-transform:uppercase;
     margin-right: 0px;
     padding: 20px;
-}
-.header_menu a{
-    text-decoration: none;
-    color: #fff;
-}
-    
+} */
