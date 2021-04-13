@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: green;
+}
+#main{
+    width: 1000px;
+    height: 900px;
+    border: solid 1px;
+    border-color: #000;
+    margin: 20px auto;
+    padding-left: 20px;
+}
+#main h1{
+    padding-top: 20px;
+    color: red;
+    padding-bottom: 20px;
+}
+#main h2{
+    color: #fff;
+    padding-bottom: 20px;
+}
+#main p{
+    
+    padding-top: 20px;
+}
+
+#main img{
+    
+}
+#main .img{
+    background-color: yellow;
+    text-align: center;
+
+    
+}
