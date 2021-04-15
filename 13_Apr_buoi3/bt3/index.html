@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./reset.css">
+</head>
+<body>
+    <div class="main">
+        <form action="method">
+        <h2>Application for permission to date my daughter</h2>
+        <p><b>Note:</b> Form is to be completed at least 21 days prior to date</p>
+        <div class="personal">
+        <div class="header">
+        Name: <input type="text" placeholder="Enter name here" ><br>
+        Address: <input type="text" placeholder="Enter address here" ><br>
+        Email: <input type="text" placeholder="Enter email here" ><br>
+        Phone Number: <input type="text" placeholder="Enter 10 digit number" ><br>
+        IQ: <input type="number" placeholder="Enter IQ here"><br>
+        Gender <br><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+        <br><br>
+        Date of Proposed Outing: <input type="date" name="date" id="date">
+        </div>
+        <div class="content">
+        Check All That Apply <br><br>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> I have a bike</label><br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2"> I have a car</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> I have a boat</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> I work full-time</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3">my parents are rich</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> Is the date at a well lit public location</label><br><br>
+        </div>
+        <div class="footer">
+            Political Persuation: <input type="text" id="ide" list="wing">
+            <datalist id="wing">
+                <option value="left wing"></option>
+                <option value="right wing"></option>
+                <option value="on wing"></option>
+                <option value="back wing"></option>
+            </datalist> 
+           Education lever Completed: <input type="text" id="lever" list="lv" >
+           <datalist id="lv">
+           <option value="university"></option>
+           <option value="high school"></option>
+           <option value="junior high"></option>
+            </datalist>
+        </div>
+        </div>
+        <br><br>
+        <div class="essay">
+            <label for="daughter">In 50 words or more explain why you want to date my daughter</label><br><br>
+            <textarea id="daughter" placeholder="Enter Text Here"></textarea><br><br>
+            <label for="upload">Please upload contact details for 2 references</label><br>
+            <textarea id="upload" placeholder="Enter Text Here"></textarea>
+            <p>Upload Police Clearance Certificate, bank Statement and Medical Certifiates here: <input type="file"></p>
+        </div>
+    </form>
+    <input type="submit" value="Send your application">
+    </div>
+</body>
+</html>

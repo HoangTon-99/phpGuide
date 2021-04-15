@@ -1,0 +1,30 @@
+.main{
+    border: solid;
+    margin:30px auto;
+    width:600px;
+    padding:30px 20px;
+}
+.main h2{
+    padding-bottom: 20px;
+    font-size:25px;
+}
+.main img{
+    width:50%;
+    height:50%;
+    /* display: block; */
+    text-align: center;
+    margin:0 auto;
+}
+.main h3{
+    font-size:20px;
+    padding-top: 20px;
+}
+.main p{
+    padding-bottom:20px;
+}
+.main a{
+    padding:12px 20px;
+    text-decoration: none;
+    background-color: #3ab1db;
+    color: #fff;
+}
