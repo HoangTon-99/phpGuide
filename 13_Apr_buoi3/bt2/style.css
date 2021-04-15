@@ -1,0 +1,15 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.main{
+    width:600px;
+    height:700px;
+    margin: 50px 30px;
+    padding-left: 10px;
+    border-left-style: solid;
+}
+.main video{
+    padding-bottom: 50px;
+}
