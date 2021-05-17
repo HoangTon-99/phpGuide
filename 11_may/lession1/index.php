@@ -11,7 +11,7 @@
         Số A:<input type="text" name="numberA" >
         Số B:<input type="text" name="numberB" >
     <input type="submit" value="+" name="btnsubmit">
-    <button ty>Kết quả</button>
+    <button type>Kết quả</button>
     </form>
 </body>
 </html>
