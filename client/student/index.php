@@ -1,6 +1,6 @@
 <?php
 
-require('../config/database.php');
+require '../config/database.php';
 
 //Bước 2: Viết câu sql
 $limit = 1;
@@ -32,7 +32,7 @@ $resultCount = $conn->query($studentsCount);
 $count = $resultCount->fetch_assoc();
 $totalRecordsCount = $count['student_count'];
 
-//check number of 
+//check number of
 
 $totalPages = ceil($totalRecordsCount / $limit);
 
@@ -52,7 +52,8 @@ $students = $result->fetch_all(MYSQLI_ASSOC);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Students</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 </head>
 
 <body>
@@ -73,46 +74,47 @@ $students = $result->fetch_all(MYSQLI_ASSOC);
         </tr>
 
         <?php
-        if (count($students) > 0) :
-            foreach ($students as $student) : ?>
-                <tr>
-                    <td><?php echo $student['id'] ?></td>
-                    <td><?php echo $student['student_id'] ?></td>
-                    <td><?php echo $student['first_name'] ?></td>
-                    <td><?php echo $student['last_name'] ?></td>
-                    <td><?php echo $student['email'] ?></td>
-                    <td><?php echo $student['dob'] ?></td>
-                    <td>
-                        <a href="edit.php?id=<?php echo $student['id'] ?>">Edit</a>
-                        <a href="delete.php?id=<?php echo $student['id'] ?>" onclick="return confirm('Are you sure')">Delete</a>
-                    </td>
-                </tr>
-            <?php endforeach;
-        else :
-            ?>
-            <tr>
-                <td colspan="6">No result</td>
-            </tr>
-        <?php endif; ?>
+if (count($students) > 0):
+    foreach ($students as $student): ?>
+	        <tr>
+	            <td><?php echo $student['id'] ?></td>
+	            <td><?php echo $student['student_id'] ?></td>
+	            <td><?php echo $student['first_name'] ?></td>
+	            <td><?php echo $student['last_name'] ?></td>
+	            <td><?php echo $student['email'] ?></td>
+	            <td><?php echo $student['dob'] ?></td>
+	            <td>
+	                <a href="edit.php?id=<?php echo $student['id'] ?>">Edit</a>
+	                <a href="delete.php?id=<?php echo $student['id'] ?>" onclick="return confirm('Are you sure')">Delete</a>
+	            </td>
+	        </tr>
+	        <?php endforeach;
+else:
+?>
+        <tr>
+            <td colspan="6">No result</td>
+        </tr>
+        <?php endif;?>
     </table>
 
     <!-- Pagination -->
     <nav aria-label="Page navigation example">
         <ul class="pagination">
 
-            <?php if (isset($_GET['page']) && $_GET['page'] != 1) : ?>
-                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-            <?php endif; ?>
+            <?php if (isset($_GET['page']) && $_GET['page'] != 1): ?>
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <?php endif;?>
 
-            <?php for ($i = 1; $i <= $totalPages; $i++) : ?>
-                <li class="page-item <?php echo (isset($_GET['page']) && $_GET['page'] == $i) ? 'active' : '' ?>">
-                    <a class="page-link" href="index.php?page=<?php echo $i ?>&student_id=<?php echo isset($_GET['student_id']) ? $_GET['student_id'] : '' ?>"><?php echo $i; ?></a>
-                </li>
-            <?php endfor; ?>
+            <?php for ($i = 1; $i <= $totalPages; $i++): ?>
+            <li class="page-item <?php echo (isset($_GET['page']) && $_GET['page'] == $i) ? 'active' : '' ?>">
+                <a class="page-link"
+                    href="index.php?page=<?php echo $i ?>&student_id=<?php echo isset($_GET['student_id']) ? $_GET['student_id'] : '' ?>"><?php echo $i; ?></a>
+            </li>
+            <?php endfor;?>
 
-            <?php if ($page == 1 || isset($_GET['page']) && $_GET['page'] != $totalPages) : ?>
-                <li class="page-item"><a class="page-link" href="#">Next</a></li>
-            <?php endif; ?>
+            <?php if ($page == 1 || isset($_GET['page']) && $_GET['page'] != $totalPages): ?>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            <?php endif;?>
         </ul>
     </nav>
 </body>
