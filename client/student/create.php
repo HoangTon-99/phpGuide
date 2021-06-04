@@ -26,6 +26,7 @@ if (isset($_POST['submit'])) :
     //nếu tạo thành công => về trang danh sách
     if ($result) {
         header('location:index.php');
+
     }
 endif;
 

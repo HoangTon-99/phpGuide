@@ -32,6 +32,8 @@
                                 href="index.php">Trang Chu</a></li>
                         <li class="d-inline pe-3"><a class="text-decoration-none fw-bold text-white"
                                 href="login.php">Login</a></li>
+                        <li class="d-inline pe-3"><a class="text-decoration-none fw-bold text-white"
+                                href="signup.php">Signnup</a></li>        
                     </ul>
                 </div>
             </div><!-- /.container -->
@@ -40,9 +42,9 @@
     <main>
         <div class="container p-5 fw-normal t-j" align="center">
             <h1>Lorem Ipsum</h1>
-            <i>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</i>
-            <p>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is
-                pain..."</p>
+            <i>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</i><br>
+            <b>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is
+                pain..."</b>
             <hr>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla nunc, viverra sit amet interdum non,
                 iaculis eu nibh. Morbi vel posuere ligula. Etiam turpis leo, fringilla non turpis non, ultricies
